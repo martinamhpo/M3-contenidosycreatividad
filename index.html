@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta de la Suerte - CHEZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Bienvenida -->
+    <div id="welcome-screen" class="screen active">
+        <div class="content">
+            <div class="welcome-text">
+                <h1>Bienvenidos a la ruleta de la suerte</h1>
+                <h2>CHEZ</h2>
+                <p>¡Gira la ruleta y gana increíbles premios!</p>
+                <button id="start-game" class="btn">Jugar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla del Juego -->
+    <div id="game-screen" class="screen">
+        <div class="content">
+            <div class="spins-counter">
+                <p>Tiradas restantes: <span id="spins-left">2</span></p>
+            </div>
+            <div class="wheel-container">
+                <canvas id="wheel" width="400" height="400"></canvas>
+                <div class="wheel-pointer-right"></div>
+                <button id="spin-btn" class="btn">¡Girar!</button>
+            </div>
+            <div id="prize-popup" class="popup">
+                <div class="popup-content">
+                    <h3>¡Resultado!</h3>
+                    <p id="prize-message"></p>
+                    <div class="prize-icon">🎉</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Resultado -->
+    <div id="result-screen" class="screen">
+        <div class="content">
+            <h2 id="result-title">¡Felicidades!</h2>
+            <div class="results-summary">
+                <h3>Resumen de tus premios:</h3>
+                <div id="prizes-list"></div>
+            </div>
+            <button id="play-again" class="btn">Volver a jugar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
